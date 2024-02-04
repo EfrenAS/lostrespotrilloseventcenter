@@ -1,0 +1,10 @@
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 0.1rem;
+    padding: 1rem;
+
+    @include d-large {
+        padding: calc($spacing / 2) $spacing;
+    }
+}

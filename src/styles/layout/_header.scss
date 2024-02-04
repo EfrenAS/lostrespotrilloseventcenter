@@ -1,0 +1,80 @@
+header {
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/backgrounds/venue.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    .navigation {
+        height: 10rem;
+    }
+
+    .hero {
+        flex: 1;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+}
+
+.hero {
+    padding: calc($spacing / 2) calc($spacing / 3);
+
+
+    @include d-xlarge {
+        padding: calc($spacing / 2) $spacing;
+    }
+
+    .title {
+        color: $c-background;
+        font-size:  14vw;
+        line-height: 1.5;
+        
+        @include d-medium {
+            font-size: 6rem;
+            max-width: 40rem;
+        }
+        
+        @include d-large {
+            margin: 0;
+            margin-top: 14rem;
+            font-size: 8rem;
+            max-width: 48rem;
+        }
+
+        @include d-xlarge {
+            font-size: 9rem;
+            max-width: 55rem;
+        }
+    }
+
+}
+
+.hero-text {
+
+    @include d-large{
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        gap: $spacing;
+    }
+    
+    p {
+        color: $c-background;
+        font-size: $text-lg;
+        text-align: center;
+        margin-bottom: calc($spacing / 2);
+    }
+    
+    a {
+        display: block;
+        font-size: $text-lg;
+        text-align: center;
+        color: $c-background;
+        text-decoration: underline;
+    }
+
+}

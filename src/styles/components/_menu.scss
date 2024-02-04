@@ -1,0 +1,21 @@
+.menu {
+    display: none;
+    
+    a {
+        color: $c-background;
+        font-size: $text-lg;
+        font-weight: $semibold;
+        text-transform: uppercase;
+        padding: calc($spacing / 6);
+        transition: color 0.3s ease-in-out;
+
+        &:hover,
+        &:active {
+            color: $gold;
+        }
+    }
+
+    @include d-large {
+        display: block;
+    }
+}
