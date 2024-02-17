@@ -1,0 +1,10 @@
+.paragraph {
+
+    text-align: center;
+    margin-top: $spacing;
+    line-height: 1.5;
+
+    @include d-medium {
+        font-size: $text-lg;
+    }
+}

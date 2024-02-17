@@ -1,0 +1,12 @@
+---
+const { frontmatter } = Astro.props;
+
+import EventCard from "../components/EventCard.astro";
+---
+
+<div class="event__card">
+    <div class="event__image">
+        <slot />
+    </div>
+
+</div>

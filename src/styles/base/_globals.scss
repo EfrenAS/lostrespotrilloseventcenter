@@ -30,13 +30,58 @@ p {
     margin: 0;
 }
 
-img {
+img, picture {
     width: 100%;
     max-width: 100%;
 }
 
+section {
+    padding: $spacing 0;
+}
+
 .container {
     width: 95%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
+}
+
+.subtitle {
+    font-size: $text-xl;
+    text-transform: uppercase;
+    text-align: center;
+    
+    @include d-medium {
+        font-size: 4rem;
+    }
+
+    &-esp {
+        color: $gold;
+        padding-top: 1rem;
+        display: block;
+        font-size: $text-sm;
+
+        @include d-medium {
+            font-size: $text-lg;
+        }
+    }
+}
+
+.text-primary {
+    color: $c-primary;
+}
+
+.text-secondary {
+    color: $c-secondary;
+}
+
+.link-dotted-bottom {
+    border-bottom: 2px dotted  $c-primary;
+}
+
+.show {
+    display: block;
+}
+
+.hidden {
+    display:  none;
 }

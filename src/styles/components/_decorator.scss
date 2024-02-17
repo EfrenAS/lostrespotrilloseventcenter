@@ -1,0 +1,29 @@
+.decorator {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: calc($spacing / 2) 0;
+    
+    .line__gradient {
+        
+        &--left {
+            height: 2px;
+            width: 45%;
+            // background: $brown;
+            background-image: linear-gradient(to right, #fff8ee, #ede2d3, #dbccb8, #c9b79e, #b8a285);
+        }
+
+        &--right {
+            height: 2px;
+            width: 45%;
+            background-image: linear-gradient(to left, #fff8ee, #ede2d3, #dbccb8, #c9b79e, #b8a285);;
+        }
+    }
+
+    .circle--unfilled {
+        width: 1rem;
+        height: 1rem;
+        border: 3px solid $gold;
+        rotate: 45deg;
+    }
+}

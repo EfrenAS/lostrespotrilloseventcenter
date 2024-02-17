@@ -1,0 +1,50 @@
+.card {
+    background-color: $sweet-brown;
+    border-radius: 0.5rem;
+    padding: calc($spacing / 3) calc($spacing  / 2);
+
+    width: 17rem;
+    
+    @include d-medium {
+        padding: calc($spacing / 2) calc($spacing  / 4);
+        width: 25rem;
+    }
+
+    &-image {
+        margin: 0 auto;
+        width:  11rem;
+
+        @include d-medium {
+            width: 11rem;
+        }
+    }
+
+    &-title {
+        text-align: center;
+        font-size: $text-xl;
+        font-weight: $semibold;
+        padding-top: calc($spacing / 3);
+
+        @include d-medium {
+            font-size: 4rem;
+         }
+
+        .subscript {
+            font-size: 1rem;
+            font-weight: $bold;
+            text-transform: uppercase;
+            
+            @include d-medium {
+                font-size: $text-lg;
+             }
+        }
+    }
+}
+
+.amenities-container {
+    margin: $spacing auto;
+    display:  flex;
+    gap: calc($spacing / 3);
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
