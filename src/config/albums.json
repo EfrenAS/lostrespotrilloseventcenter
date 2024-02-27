@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Wedding of Luz Maria & Jose Guadalupe",
+    "imageAttr": {
+      "alt": "Luz Maria and Jose Guadalupe getting married in a beautiful garden.",
+      "height": 200,
+      "width": 400
+    },
+    "pictures": [
+      "/src/assets/widding_demo/boda_1.jpg",
+      "/src/assets/widding_demo/boda_2.jpg",
+      "/src/assets/widding_demo/boda_3.jpg",
+      "/src/assets/widding_demo/boda_4.jpg",
+      "/src/assets/widding_demo/boda_5.jpg"
+    ]
+  }
+]

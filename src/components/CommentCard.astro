@@ -1,0 +1,16 @@
+---
+interface Props {
+  name: string;
+  comment: string;
+  date: string;
+}
+
+const { name, comment, date } = Astro.props;
+---
+
+<div class="comment-item">
+  <h3>{name}</h3>
+  <p class="comment-text">
+    <i>{comment}</i>
+  </p>
+</div>

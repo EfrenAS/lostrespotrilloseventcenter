@@ -1,0 +1,27 @@
+---
+import Carousel from "../Carousel.astro";
+
+import albums from "../../config/albums.json";
+---
+
+<section class="gallery" id="gallery">
+  <h2 class="subtitle">
+    gallery
+    <span class="subtitle-esp">Galeria</span>
+  </h2>
+  <p class="paragraph">
+    Beautiful moments that our clients have shared with us, here is a sample of
+    them.
+  </p>
+  <div class="gallery__container">
+    {
+      albums.map((album) => (
+        <Carousel
+          title={album.title}
+          imageAttr={album.imageAttr}
+          pictures={album.pictures}
+        />
+      ))
+    }
+  </div>
+</section>

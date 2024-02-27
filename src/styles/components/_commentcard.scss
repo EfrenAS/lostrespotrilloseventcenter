@@ -1,0 +1,39 @@
+.comment {
+
+  &-item {
+    position: relative;
+    border-radius: 0.5rem;
+    padding: calc($spacing / 2) calc($spacing / 3);
+    background: $white;
+    line-height: 1.5;
+
+    h3 {
+    margin: 0;
+    margin-bottom: calc($spacing / 2);
+    }
+  }
+
+  &-text {
+    padding-left: 4rem;
+    padding-right: 2rem;
+    
+    &::before {
+      content: '“';
+      position: absolute;
+      font-size: 5rem;
+      margin-right: 2rem;
+      top: 7rem;
+      left: 2rem;
+    }
+
+    &::after {
+      content: '”';
+      position: absolute;
+      font-size: 5rem;
+      margin-left: 1rem;
+      bottom: -2rem;
+      right: 2rem;
+    }
+  }
+
+}

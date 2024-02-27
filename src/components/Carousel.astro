@@ -1,0 +1,45 @@
+---
+import type { ImageMetadata } from "astro";
+import { Picture, Image } from "astro:assets";
+import cameraIcon from "../assets/icons/camera.png";
+
+interface Props {
+  title: string;
+  imageAttr: {
+    alt: string;
+    width: number;
+    height: number;
+  };
+  pictures: string[];
+}
+
+const { title, imageAttr, pictures } = Astro.props;
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/widding_demo/*.{jpeg,png,jpg.gif}"
+);
+---
+
+<div class="carousel">
+  <div class="carousel__title">
+    <span>
+      <Image src={cameraIcon} alt="Icon Camera" />
+    </span>
+    <h2>
+      {title}
+    </h2>
+  </div>
+  <div class="carousel__item"></div>
+  <div class="carousel__slide--mini">
+    {
+      pictures.map((picture) => (
+        <Picture
+          src={picture}
+          alt={imageAttr.alt}
+          width={imageAttr.width}
+          height={imageAttr.height}
+        />
+      ))
+    }
+  </div>
+</div>

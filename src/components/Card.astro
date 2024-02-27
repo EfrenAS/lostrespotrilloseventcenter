@@ -2,14 +2,14 @@
 import { Picture } from "astro:assets";
 
 interface Props {
-    quantity: string,
-    measurement: string,
-    img: {
-        url: string,
-        alt: string,
-        width: number,
-        height:number
-    }
+  quantity: string;
+  measurement: string;
+  img: {
+    url: string;
+    alt: string;
+    width: number;
+    height: number;
+  };
 }
 
 // Props
@@ -17,19 +17,19 @@ const { quantity, measurement, img } = Astro.props;
 ---
 
 <div class="card">
-    <div class="card-image">
-        <Picture 
-            src={ img.url } 
-            formats={ ["avif", "webp"] } 
-            alt={ img.alt || "" }
-            width={ img.width }
-            height={ img.height }
-        />
-    </div>
-    <div class="card-body">
-        <p class="card-title text-secondary">
-            {quantity}
-            <span class="text-primary subscript">{measurement}</span>
-        </p>
-    </div>
+  <div class="card-image">
+    <Picture
+      src={img.url}
+      formats={["avif", "webp"]}
+      alt={img.alt || ""}
+      width={img.width}
+      height={img.height}
+    />
+  </div>
+  <div class="card-body">
+    <p class="card-title text-secondary">
+      {quantity}
+      <span class="text-primary subscript">{measurement}</span>
+    </p>
+  </div>
 </div>

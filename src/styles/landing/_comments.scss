@@ -1,0 +1,42 @@
+.comments {
+  background-color: $c-background;
+  border-top: 1px solid $c-primary;
+  border-bottom: 1px solid $c-primary;
+
+  &_items {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing;
+
+    @include d-large {
+      flex-direction: row;
+    }
+  }
+
+  .title {
+    span {
+      display: block;
+      font-size: $text-rg;
+
+      @include d-medium {
+        font-size: $text-lg;
+      }
+    }
+  }
+
+  .text-dark {
+    font-size: $text-lg;
+    font-weight: $semibold;
+    margin-bottom: $spacing;
+
+    &--large {
+      color: $c-secondary;
+      font-size: $text-xl;
+      margin-bottom: $spacing;
+
+      @include d-medium {
+        font-size: 4rem;
+      }
+    }
+  }
+}

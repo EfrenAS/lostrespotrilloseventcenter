@@ -1,17 +1,20 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
 // Landing sections
 import Header from "../components/landing/Header.astro";
-import Aboutus from '../components/landing/Aboutus.astro';
-import Events from '../components/landing/Events.astro';
-
+import Aboutus from "../components/landing/Aboutus.astro";
+import Events from "../components/landing/Events.astro";
+import Gallery from "../components/landing/Gallery.astro";
+import Comments from "../components/landing/Comments.astro";
 ---
 
-<Layout pageTitle = "Los Tres Potrillos Event & Hall Center">
-	<Header />
-	<main class="container">
-		<Aboutus />
-		<Events />
-	</main>
+<Layout pageTitle="Los Tres Potrillos Event & Hall Center">
+  <Header />
+  <main class="container">
+    <Aboutus />
+    <Events />
+    <Gallery />
+  </main>
+  <Comments />
 </Layout>

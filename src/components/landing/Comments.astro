@@ -1,0 +1,28 @@
+---
+// Config
+import comments from "../../config/comments.json";
+
+// Components
+import Comment from "../CommentCard.astro";
+---
+
+<section class="comments">
+  <div class="container">
+    <p class="text-dark">
+      La proxima historia puede ser la tuya!
+      <a href="#" class="link-dotted-bottom text-primary">Contact Us</a>
+    </p>
+    <p class="text-dark--large">Nuestros clientes nos han compartido sus comentarios</p>
+    <div class="comments_items container">
+      {
+        comments.map((comment) => (
+          <Comment
+            name={comment.name}
+            comment={comment.comment}
+            date={comment.date}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>

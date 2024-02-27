@@ -1,28 +1,33 @@
 ---
 // Config
-import amenities from '../../config/amenities.json';
+import amenities from "../../config/amenities.json";
 
 // Components
-import CardComponent from '../Card.astro';
-
+import CardComponent from "../Card.astro";
 ---
 
 <section class="about-us">
-    <h2 class="subtitle">
-       About Us
-       <span class="subtitle-esp">Nosotros</span>
-    </h2>
-    <p class="paragraph">
-        Open in 2023 our venue has all the amenities for you and all your guests. <span><a href="#" class="link-dotted-bottom text-primary">Come and see the place</a> </span>.
-    </p>
-    <div class="amenities-container">
-        {   amenities.map((amenity) => (
-            <CardComponent 
-                quantity = { amenity.quantity }
-                measurement = { amenity.measurement }
-                img = { amenity.img }
-            />
-        )
-        )}
-    </div>
+  <h2 class="subtitle">
+    About Us
+    <span class="subtitle-esp">Nosotros</span>
+  </h2>
+  <p class="paragraph">
+    Open in 2023 our venue has all the amenities for you and all your guests. <span
+    >
+      <a href="#" class="link-dotted-bottom text-primary"
+        >Come and see the place</a
+      >
+    </span>.
+  </p>
+  <div class="amenities-container">
+    {
+      amenities.map((amenity) => (
+        <CardComponent
+          quantity={amenity.quantity}
+          measurement={amenity.measurement}
+          img={amenity.img}
+        />
+      ))
+    }
+  </div>
 </section>
