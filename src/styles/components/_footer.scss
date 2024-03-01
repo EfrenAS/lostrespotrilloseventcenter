@@ -1,0 +1,22 @@
+.footer {
+  background-color: $black;
+  padding: calc($spacing / 2);
+
+  .copyright {
+    color: $c-primary;
+    text-align: center;
+    padding-top: calc($spacing / 2);
+  }
+
+  .menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-social-media {
+    a {
+      color: $c-background;
+    }
+  }
+}

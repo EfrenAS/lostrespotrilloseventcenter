@@ -1,0 +1,50 @@
+---
+// Data
+import contactInfo from "../../config/contact.json";
+
+import { Picture } from "astro:assets";
+---
+
+<section class="contact container">
+  <h2 class="subtitle">
+    Contact
+    <span class="subtitle-esp"> Contacto</span>
+  </h2>
+  <div class="contact-card">
+    <div class="contact-image">
+      <Picture
+        src={contactInfo.img.src}
+        alt={contactInfo.img.alt}
+        width={200}
+        height={200}
+      />
+    </div>
+    <div class="contact-text">
+      <h3>Would like talk about your party?!</h3>
+      <p>{contactInfo.schedule}</p>
+      <p>
+        <b>
+          {contactInfo.phone}
+        </b>
+      </p>
+      <a
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="contact-link"
+      >
+        <b>
+          {contactInfo.messenger}
+        </b>
+      </a>
+      <a href="#" class="contact-link"> {contactInfo.address}</a>
+      <p class="text-center">
+        <b> Better yet, see us in person!</b>
+      </p>
+      <p class="text-center">
+        We love our customers, so feel free to visit during normal business
+        hours.
+      </p>
+    </div>
+  </div>
+</section>

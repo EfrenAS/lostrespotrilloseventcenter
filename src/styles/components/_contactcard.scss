@@ -1,0 +1,54 @@
+.contact {
+  
+  &-card {
+    display: flex;
+    flex-direction: column;
+    background-color: $c-background;
+    border-radius: 0.5rem;
+    margin-top: $spacing;
+    
+    @include d-large {
+      flex-direction: row;
+      -webkit-box-shadow: 17px -15px 16px -14px rgba(98, 80, 54, 1);
+      -moz-box-shadow: 17px -15px 16px -14px rgba(98, 80, 54, 1);
+      box-shadow: 17px -15px 16px -14px rgba(98, 80, 54, 1);
+    }
+  }
+
+  &-image {
+    filter: blur(2px);
+    width: 100%;
+    
+    @include d-large {
+      width: 100rem;
+    }
+    
+    picture,
+    img {
+      -webkit-border-top-left-radius: 0.5rem;
+      -webkit-border-bottom-left-radius: 0.5rem;
+      -moz-border-radius-topleft: 0.5rem;
+      -moz-border-radius-bottomleft: 0.5rem;
+      border-top-left-radius: 0.5rem;
+      border-bottom-left-radius: 0.5rem;
+      height: 100%;
+    }
+
+  }
+
+  &-text {
+    padding: calc($spacing / 2);
+
+    h3 {
+      color: $c-secondary;
+      font-size: $text-xl;
+      text-align: center;
+    }
+    p, a {
+      display: block;
+      color: $c-secondary;
+      font-size: $text-xl;
+      padding: calc($spacing  / 2);
+    }
+  }
+}
