@@ -1,12 +1,21 @@
 ---
-const { frontmatter } = Astro.props;
+import type { CollectionEntry } from "astro:content";
 
-import EventCard from "../components/EventCard.astro";
+type Props = {
+  event: CollectionEntry<"events">;
+};
+
+const { event } = Astro.props;
 ---
 
 <div class="event__card">
-    <div class="event__image">
-        <slot />
-    </div>
-
+  <div class="event__image">
+    <img src={event.data.heroImage} alt={event.data.imageAttr.alt}>
+  </div>
+  <div class="event__text">
+    <h3>
+      {event.data.title}
+    </h3>
+    <slot />
+  </div>
 </div>

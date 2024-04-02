@@ -3,18 +3,18 @@ import { getCollection } from "astro:content";
 import MarkdownEventLayout from "../../layouts/MarkdownEventLayout.astro";
 
 export async function getStaticPaths() {
-  const eventEntries = await getCollection("events");
+  const events = await getCollection("events");
 
-  return eventEntries.map( entry => ({
-    params: { slug: entry.slug },
-    props: { entry },
+  return events.map((event) => ({
+    params: { slug: event.slug },
+    props: { event },
   }));
 }
 
-const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { event } = Astro.props;
+const { Content } = await event.render();
 ---
 
-<MarkdownEventLayout frontmatter={entry.data}>
+<MarkdownEventLayout {event}>
   <Content />
 </MarkdownEventLayout>

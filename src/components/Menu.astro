@@ -1,17 +1,15 @@
 <nav class="menu">
-    <a href="#">
-        Home
-    </a>
-    <a href="#">
-        About Us
-    </a>
-    <a href="#">
-        Events
-    </a>
-    <a href="#">
-        Gallery
-    </a>
-    <a href="#">
-        Contact
-    </a>
+  <a href="#home" class="menu-link"> Home</a>
+  <a href="#about-us" class="menu-link"> About Us</a>
+  <a href="#events" class="menu-link"> Events</a>
+  <a href="#gallery" class="menu-link"> Gallery</a>
+  <a href="#contact" class="menu-link"> Contact</a>
 </nav>
+
+<script>
+  import { translateY } from "../scripts/utils";
+
+  const menuLinks = document.querySelectorAll(".menu .menu-link");
+
+  translateY(menuLinks);
+</script>

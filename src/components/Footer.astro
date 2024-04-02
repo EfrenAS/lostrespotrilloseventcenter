@@ -1,14 +1,19 @@
 ---
 import Menu from "./Menu.astro";
 import MenuMobile from "./MenuMobile.astro";
+
+import { Icon } from "astro-icon/components";
 ---
 
 <footer class="footer">
   <div class="menu-container">
     <div class="menu-social-media">
-      <a href="#" class="link-white link-dotted-bottom">
-        Los Tres Potrillos Event & Hall Center LLC</a
-      >
+      <a href="#" class="link link-icon text-white">
+        <Icon name="mdi:facebook" class="icon-white" />
+        <span class="border-dotted-bottom">
+          Los Tres Potrillos Event & Hall Center LLC
+        </span>
+      </a>
     </div>
     <div class="menu-navigation">
       <MenuMobile />

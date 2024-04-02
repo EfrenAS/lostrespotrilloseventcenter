@@ -1,4 +1,5 @@
 .footer {
+  margin-top: calc($spacing / 2);
   background-color: $black;
   padding: calc($spacing / 2);
 
@@ -18,5 +19,10 @@
     a {
       color: $c-background;
     }
+  }
+
+  .icon-white {
+    color: $white;
+    font-size: 4rem;
   }
 }

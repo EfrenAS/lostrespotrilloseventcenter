@@ -1,14 +1,25 @@
 ---
+import { fade } from "astro:transitions";
+
 // Data
 import contactInfo from "../../config/contact.json";
 
 import { Picture } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import SubtitleDecorator from "../SubtitleDecorator.astro";
 ---
 
-<section class="contact container">
+<section
+  class="contact container"
+  id="contact"
+  transition:animate={fade({ duration: "4s" })}
+>
   <h2 class="subtitle">
     Contact
     <span class="subtitle-esp"> Contacto</span>
+    <span class="subtitle-decorator">
+      <SubtitleDecorator />
+    </span>
   </h2>
   <div class="contact-card">
     <div class="contact-image">
@@ -21,27 +32,43 @@ import { Picture } from "astro:assets";
     </div>
     <div class="contact-text">
       <h3>Would like talk about your party?!</h3>
-      <p>{contactInfo.schedule}</p>
-      <p>
-        <b>
-          {contactInfo.phone}
-        </b>
+      <p class="contact-pharagraph">
+        <Icon name="mdi:calendar-clock" class="icon-xxl" />
+        <span>
+          {contactInfo.schedule}
+        </span>
+      </p>
+      <p class="contact-pharagraph">
+        <Icon name="mdi:cellphone" class="icon-xxl" />
+        <span class="link border-dotted-bottom">
+          <b>
+            {contactInfo.phone}
+          </b>
+        </span>
       </p>
       <a
         href="#"
         target="_blank"
         rel="noopener noreferrer"
-        class="contact-link"
+        class="contact-pharagraph"
       >
-        <b>
-          {contactInfo.messenger}
-        </b>
+        <Icon name="mdi:facebook-messenger" class="icon-xxl" />
+        <span class="border-dotted-bottom">
+          <b>
+            {contactInfo.messenger}
+          </b>
+        </span>
       </a>
-      <a href="#" class="contact-link"> {contactInfo.address}</a>
-      <p class="text-center">
+      <a href="#" class="contact-pharagraph">
+        <Icon name="mdi:location-radius" class="icon-xxl" />
+        <span class="border-dotted-bottom">
+          {contactInfo.address}
+        </span>
+      </a>
+      <p class="text-center contact-comment">
         <b> Better yet, see us in person!</b>
       </p>
-      <p class="text-center">
+      <p class="text-center contact-comment">
         We love our customers, so feel free to visit during normal business
         hours.
       </p>

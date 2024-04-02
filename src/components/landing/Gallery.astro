@@ -1,6 +1,8 @@
 ---
 import Carousel from "../Carousel.astro";
 
+import SubtitleDecorator from "../SubtitleDecorator.astro";
+
 import albums from "../../config/albums.json";
 ---
 
@@ -8,6 +10,9 @@ import albums from "../../config/albums.json";
   <h2 class="subtitle">
     gallery
     <span class="subtitle-esp">Galeria</span>
+    <span class="subtitle-decorator">
+      <SubtitleDecorator />
+    </span>
   </h2>
   <p class="paragraph">
     Beautiful moments that our clients have shared with us, here is a sample of

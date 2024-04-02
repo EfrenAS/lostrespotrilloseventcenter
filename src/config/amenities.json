@@ -1,90 +1,90 @@
 [
-    {
-        "title": "build",
-        "quantity": "6500",
-        "measurement": "sqtf",
-        "img": {
-            "url":"/src/assets/icons/building.png",
-            "alt": "Building Icon",
-            "width": 100,
-            "height": 100
-        }
-    },
-    {
-        "title": "capacity",
-        "quantity": "300",
-        "measurement": "people",
-        "img": {
-            "url":"/src/assets/icons/meeting.png",
-            "alt": "Meeting Room Icon",
-            "width": 100,
-            "height": 100
-        }
-    },
-    {
-        "title": "furniture",
-        "quantity": "300",
-        "measurement": "chairs",
-        "img": {
-            "url":"/src/assets/icons/chair.png",
-            "alt": "Chair Icon",
-            "width": 100,
-            "height": 100
-        }
-    },
-    {
-        "title": "furniture",
-        "quantity": "30",
-        "measurement": "tables",
-        "img": {
-            "url":"/src/assets/icons/tablecloth.png",
-            "alt": "Table Icon",
-            "width": 100,
-            "height": 100
-        }
-    },
-    {
-        "title": "places",
-        "quantity": "1",
-        "measurement": "bar",
-        "img": {
-            "url":"/src/assets/icons/bar.png",
-            "alt": "Bar Icon",
-            "width": 100,
-            "height": 100
-        }
-    },
-    {
-        "title": "places",
-        "quantity": "1",
-        "measurement": "kitchen",
-        "img": {
-            "url":"/src/assets/icons/kitchen.png",
-            "alt": "Kitchen Icon",
-            "width": 100,
-            "height": 100
-        }
-    },
-    {
-        "title": "places",
-        "quantity": "1",
-        "measurement": "dressing room",
-        "img": {
-            "url":"/src/assets/icons/dressingroom.png",
-            "alt": "Dressing Room Icon",
-            "width": 100,
-            "height": 100
-        }
-    },
-    {
-        "title": "places",
-        "quantity": "2",
-        "measurement": "men / women restrooms",
-        "img": {
-            "url":"/src/assets/icons/restroom.png",
-            "alt": "Restroom Icon",
-            "width": 100,
-            "height": 100
-        }
+  {
+    "title": "build",
+    "quantity": "6500",
+    "measurement": "sqtf",
+    "img": {
+      "url": "/src/assets/icons/building.png",
+      "alt": "Building Icon",
+      "width": 100,
+      "height": 100
     }
+  },
+  {
+    "title": "capacity",
+    "quantity": "300",
+    "measurement": "people",
+    "img": {
+      "url": "/src/assets/icons/meeting.png",
+      "alt": "Meeting Room Icon",
+      "width": 100,
+      "height": 100
+    }
+  },
+  {
+    "title": "furniture",
+    "quantity": "300",
+    "measurement": "chairs",
+    "img": {
+      "url": "/src/assets/icons/chair.png",
+      "alt": "Chair Icon",
+      "width": 100,
+      "height": 100
+    }
+  },
+  {
+    "title": "furniture",
+    "quantity": "30",
+    "measurement": "tables",
+    "img": {
+      "url": "/src/assets/icons/tablecloth.png",
+      "alt": "Table Icon",
+      "width": 100,
+      "height": 100
+    }
+  },
+  {
+    "title": "places",
+    "quantity": "1",
+    "measurement": "bar",
+    "img": {
+      "url": "/src/assets/icons/bar.png",
+      "alt": "Bar Icon",
+      "width": 100,
+      "height": 100
+    }
+  },
+  {
+    "title": "places",
+    "quantity": "1",
+    "measurement": "kitchen",
+    "img": {
+      "url": "/src/assets/icons/kitchen.png",
+      "alt": "Kitchen Icon",
+      "width": 100,
+      "height": 100
+    }
+  },
+  {
+    "title": "places",
+    "quantity": "1",
+    "measurement": "dressing room",
+    "img": {
+      "url": "/src/assets/icons/dressingroom.png",
+      "alt": "Dressing Room Icon",
+      "width": 100,
+      "height": 100
+    }
+  },
+  {
+    "title": "places",
+    "quantity": "2",
+    "measurement": "men / women restrooms",
+    "img": {
+      "url": "/src/assets/icons/restroom.png",
+      "alt": "Restroom Icon",
+      "width": 100,
+      "height": 100
+    }
+  }
 ]

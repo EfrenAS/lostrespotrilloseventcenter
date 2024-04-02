@@ -7,6 +7,7 @@ header {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    margin-bottom: calc($spacing / 2);
 
     .navigation {
         height: 10rem;
@@ -30,14 +31,14 @@ header {
 
     .title {
         color: $c-background;
-        font-size:  14vw;
+        font-size: 14vw;
         line-height: 1.5;
-        
+
         @include d-medium {
             font-size: 6rem;
             max-width: 40rem;
         }
-        
+
         @include d-large {
             margin: 0;
             margin-top: 14rem;
@@ -54,27 +55,13 @@ header {
 }
 
 .hero-text {
+    display: flex;
+    gap: calc($spacing / 3);
+    justify-content: center;
 
-    @include d-large{
-        display: flex;
+    @include d-large {
         justify-content: flex-end;
         width: 100%;
         gap: $spacing;
     }
-    
-    p {
-        color: $c-background;
-        font-size: $text-lg;
-        text-align: center;
-        margin-bottom: calc($spacing / 2);
-    }
-    
-    a {
-        display: block;
-        font-size: $text-lg;
-        text-align: center;
-        color: $c-background;
-        text-decoration: underline;
-    }
-
 }

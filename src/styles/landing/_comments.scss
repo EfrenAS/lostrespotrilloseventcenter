@@ -2,6 +2,7 @@
   background-color: $c-background;
   border-top: 1px solid $c-primary;
   border-bottom: 1px solid $c-primary;
+  margin: calc($spacing / 2) 0;
 
   &_items {
     display: flex;

@@ -4,17 +4,21 @@ import amenities from "../../config/amenities.json";
 
 // Components
 import CardComponent from "../Card.astro";
+import SubtitleDecorator from "../SubtitleDecorator.astro";
 ---
 
-<section class="about-us">
-  <h2 class="subtitle">
+<section class="about-us" id="about-us">
+  <h2 class="subtitle scale">
     About Us
     <span class="subtitle-esp">Nosotros</span>
+    <span class="subtitle-decorator">
+      <SubtitleDecorator />
+    </span>
   </h2>
   <p class="paragraph">
     Open in 2023 our venue has all the amenities for you and all your guests. <span
     >
-      <a href="#" class="link-dotted-bottom text-primary"
+      <a href="#" class="border-dotted-bottom text-primary"
         >Come and see the place</a
       >
     </span>.
@@ -31,3 +35,20 @@ import CardComponent from "../Card.astro";
     }
   </div>
 </section>
+
+<script>
+  let amenitiesObserver = new IntersectionObserver(monitorVisibility, {});
+
+  let amenities = document.querySelector(".amenities-container");
+
+  function monitorVisibility(entries) {
+    let entry = entries[0];
+    if (entry.isIntersecting) {
+      console.log("The section is visible!");
+    } else {
+      console.log("The section is no visible");
+    }
+  }
+
+  amenitiesObserver.observe(amenities);
+</script>

@@ -1,0 +1,19 @@
+.link {
+  font-size: $text-lg;
+
+  &-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: calc($spacing / 3);
+  }
+
+  &-text {
+    display: none;
+    padding-bottom: 0.2rem;
+
+    @include d-medium {
+      display: block;
+    }
+  }
+}

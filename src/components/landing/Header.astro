@@ -1,26 +1,43 @@
 ---
-
 // Components
 import Menu from "../Menu.astro";
 import MenuMobile from "../MenuMobile.astro";
-
+import { Icon } from "astro-icon/components";
 ---
 
-<header>
-    <div class="navigation">
-        <div class="logo">
-            Logo
-        </div>
-        <MenuMobile />
-        <Menu />
+<header id="home">
+  <div class="navigation">
+    <div class="logo">Logo</div>
+    <MenuMobile />
+    <Menu />
+  </div>
+  <section class="hero">
+    <h1 class="title title-animate">Los Tres Potrillos Event & Hall Center</h1>
+    <div class="hero-text">
+      <a href="#" class="link link-icon text-white text-center">
+        <Icon
+          name="mdi:location-radius"
+          class="icon icon-white icon-xxl icon-location"
+        />
+        <span class="border-dotted-bottom link-text">
+          2520 E I-30 Frontage Rd, Greenville, TX
+        </span>
+      </a>
+      <a href="#" class="link link-icon text-white">
+        <Icon name="mdi:facebook" class="icon icon-white icon-xxl" />
+        <span class="border-dotted-bottom link-text">
+          Los Tres Potrillos Event & Hall Center LLC</span
+        >
+      </a>
     </div>
-    <section class="hero">
-        <h1 class="title">
-            Los Tres Potrillos Event & Hall Center
-        </h1>
-        <div class="hero-text">
-            <p> 2520 E I-30 Frontage Rd, Greenville, TX </p>
-            <a href="#" class="link"> Los Tres Potrillos Event & Hall Center LLC</a>
-        </div>
-    </section>
+  </section>
 </header>
+<script>
+  import { scaleUp, strechToRight } from "../../scripts/utils";
+
+  const element = document.querySelectorAll(".link .icon");
+  const texts = document.querySelectorAll(".link .link-text");
+
+  scaleUp(element);
+  strechToRight(texts);
+</script>

@@ -3,6 +3,10 @@ html {
     font-size: 62.5%;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 html,
 body {
     width: 100%;
@@ -30,13 +34,14 @@ p {
     margin: 0;
 }
 
-img, picture {
+img,
+picture {
     width: 100%;
     max-width: 100%;
 }
 
 section {
-    padding: $spacing 0;
+    padding: calc($spacing / 2) 0;
 }
 
 .container {
@@ -46,10 +51,11 @@ section {
 }
 
 .subtitle {
+    position: relative;
     font-size: $text-xl;
     text-transform: uppercase;
     text-align: center;
-    
+
     @include d-medium {
         font-size: 4rem;
     }
@@ -64,6 +70,15 @@ section {
             font-size: $text-lg;
         }
     }
+
+    &::before {
+        content: "★";
+        top: -4rem;
+        left: 49%;
+        position: absolute;
+        font-size: $text-xl;
+        color: $c-primary;
+    }
 }
 
 .text-primary {
@@ -74,8 +89,12 @@ section {
     color: $c-secondary;
 }
 
-.link-dotted-bottom {
-    border-bottom: 2px dotted  $c-primary;
+.text-white {
+    color: $white;
+}
+
+.border-dotted-bottom {
+    border-bottom: 3px dotted $c-primary;
 }
 
 .text-center {
@@ -87,5 +106,5 @@ section {
 }
 
 .hidden {
-    display:  none;
+    display: none;
 }

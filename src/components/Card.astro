@@ -28,7 +28,7 @@ const { quantity, measurement, img } = Astro.props;
   </div>
   <div class="card-body">
     <p class="card-title text-secondary">
-      {quantity}
+      <span class="counter" data-count={quantity}>0</span>
       <span class="text-primary subscript">{measurement}</span>
     </p>
   </div>

@@ -1,0 +1,10 @@
+.subtitle-decorator {
+  display: block;
+  padding-top: calc($spacing / 2);
+  margin: 0 auto;
+  width: 20rem;
+
+  @include d-medium {
+    width: 35rem;
+  }
+}

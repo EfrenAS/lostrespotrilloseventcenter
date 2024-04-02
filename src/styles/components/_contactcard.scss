@@ -1,12 +1,12 @@
 .contact {
-  
+
   &-card {
     display: flex;
     flex-direction: column;
     background-color: $c-background;
     border-radius: 0.5rem;
     margin-top: $spacing;
-    
+
     @include d-large {
       flex-direction: row;
       -webkit-box-shadow: 17px -15px 16px -14px rgba(98, 80, 54, 1);
@@ -18,11 +18,11 @@
   &-image {
     filter: blur(2px);
     width: 100%;
-    
+
     @include d-large {
       width: 100rem;
     }
-    
+
     picture,
     img {
       -webkit-border-top-left-radius: 0.5rem;
@@ -44,11 +44,22 @@
       font-size: $text-xl;
       text-align: center;
     }
-    p, a {
-      display: block;
-      color: $c-secondary;
-      font-size: $text-xl;
-      padding: calc($spacing  / 2);
+  }
+
+  &-pharagraph {
+    display: flex;
+    gap: calc($spacing / 3);
+    align-items: center;
+    color: $c-secondary;
+    padding: calc($spacing / 3) 0;
+
+    @include d-medium {
+      font-size: $text-lg;
     }
+  }
+
+  &-comment {
+    padding: calc($spacing / 3) 0;
+    ;
   }
 }
