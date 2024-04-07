@@ -37,18 +37,42 @@ import SubtitleDecorator from "../SubtitleDecorator.astro";
 </section>
 
 <script>
+  import anime from "animejs/lib/anime.es";
+  import { scaleUp } from "../../scripts/utils";
+
   let amenitiesObserver = new IntersectionObserver(monitorVisibility, {});
 
   let amenities = document.querySelector(".amenities-container");
 
+  let iconsAmenities = amenities?.querySelectorAll(".card-image");
+
+  const counters = document.querySelectorAll(".card-title .counter");
+
   function monitorVisibility(entries) {
     let entry = entries[0];
     if (entry.isIntersecting) {
-      console.log("The section is visible!");
-    } else {
-      console.log("The section is no visible");
+      counters.forEach((counter) => {
+        let startCounter = 0;
+        let limitCounter = parseInt(counter.dataset.count);
+
+        animateCounter(counter, { startCounter, limitCounter });
+      });
+
+      iconsAmenities?.forEach((icon) => {
+        scaleUp(icon);
+      });
     }
   }
+
+  const animateCounter = (target, { startCounter, limitCounter }) => {
+    anime({
+      targets: target,
+      innerHTML: [startCounter, limitCounter],
+      easing: "easeInOutExpo",
+      round: 1,
+      duration: 2000,
+    });
+  };
 
   amenitiesObserver.observe(amenities);
 </script>

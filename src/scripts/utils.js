@@ -4,6 +4,7 @@ const scaleUp = (element) => {
   anime({
     targets: element,
     scale: [0, 1],
+    duration: 2000,
   });
 };
 
@@ -51,6 +52,10 @@ const translateY = (element) => {
       },
       0
     );
+};
+
+const counterIncrement = (element, { startCounter, limitCounter }) => {
+  //TODO: Continue here ...
 };
 
 export { scaleUp, moveToRight, strechToRight, translateY };

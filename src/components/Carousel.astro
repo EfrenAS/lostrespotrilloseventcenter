@@ -19,14 +19,25 @@ const { title, imageAttr, pictures } = Astro.props;
 <div class="carousel">
   <div class="carousel__title">
     <span>
-      <Icon name="mdi:camera-enhance" class=" icon-secondary icon-xxl" />
+      <Icon name="mdi:camera-enhance" class="icon-secondary icon-xxl" />
     </span>
     <h2>
       {title}
     </h2>
   </div>
-  <div class="carousel__item"></div>
-  <div class="carousel__slide--mini">
+  <div class="carousel__slide">
+    {
+      pictures.map((picture) => (
+        <Picture
+          src={picture}
+          alt={imageAttr.alt}
+          width={imageAttr.width}
+          height={imageAttr.height}
+        />
+      ))
+    }
+  </div>
+  <div class="carousel__thumbnails">
     {
       pictures.map((picture) => (
         <Picture

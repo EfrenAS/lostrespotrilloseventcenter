@@ -1,14 +1,20 @@
 .event {
+  opacity: 0;
   display: flex;
   flex-direction: column;
   background-color: $c-background;
   margin-bottom: $spacing;
-  gap: calc($spacing / 3);
+  gap: calc($spacing / 2);
+
+  &.visible {
+    opacity: 1;
+    transition: all 0.5s ease-in;
+    transition-delay: 0.2s;
+  }
 
   @include d-large {
     align-items: center;
-    padding: calc($spacing / 3) 0;
-    // height: 70rem;
+    padding: $spacing 0 $spacing 0;
 
     &:nth-child(odd) {
       flex-direction: row;
@@ -17,20 +23,13 @@
     &:nth-child(even) {
       flex-direction: row-reverse;
     }
-
   }
 
   &__image {
     display: flex;
-    opacity: 0;
-    transform: scale(0);
-    transition: all 0.5s ease-in;
-    transition-delay: 0.5s;
+    //opacity: 0;
+    // transform: scale(0);
 
-    &.visible {
-      opacity: 1;
-      transform: scale(1);
-    }
 
     &:nth-child(odd) {
       -webkit-box-shadow: 0px 14px 26px -11px rgba(98, 80, 54, 1);
@@ -52,7 +51,7 @@
     }
 
     @include d-large {
-      width: 200rem;
+      width: 120rem;
     }
 
     img,
@@ -65,6 +64,7 @@
 
   &__content {
     padding: calc($spacing / 6);
+    width: fit-content;
   }
 
   &__title {

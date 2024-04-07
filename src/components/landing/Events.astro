@@ -52,9 +52,9 @@ const events = await getCollection("events");
   const eventsObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.children[0].classList.add("visible");
+        entry.target.classList.add("visible");
       } else {
-        entry.target.children[0].classList.remove("visible");
+        entry.target.classList.remove("visible");
       }
     });
   }, {});

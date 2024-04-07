@@ -6,17 +6,18 @@
     padding: calc($spacing / 2) calc($spacing / 3);
     background: $white;
     line-height: 1.5;
+    width: min(55rem, 100%);
 
     h3 {
-    margin: 0;
-    margin-bottom: calc($spacing / 2);
+      margin: 0;
+      margin-bottom: calc($spacing / 2);
     }
   }
 
   &-text {
     padding-left: 4rem;
     padding-right: 2rem;
-    
+
     &::before {
       color: $c-secondary;
       content: '“';

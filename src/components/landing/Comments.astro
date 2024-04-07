@@ -4,6 +4,8 @@ import comments from "../../config/comments.json";
 
 // Components
 import Comment from "../CommentCard.astro";
+
+const dotteds = Array.from({ length: comments.length }, (v, i) => i);
 ---
 
 <section class="comments">
@@ -15,6 +17,9 @@ import Comment from "../CommentCard.astro";
     <p class="text-dark--large">
       Nuestros clientes nos han compartido sus comentarios
     </p>
+    <div class="dotteds-container">
+      {dotteds.map((dotted) => <div class="dotted" />)}
+    </div>
     <div class="comments_items container">
       {
         comments.map((comment) => (
@@ -28,3 +33,10 @@ import Comment from "../CommentCard.astro";
     </div>
   </div>
 </section>
+<script>
+  // const MAX_CONTENTS_BY_CONTENT = 2;
+  // const contents = Math.round(comments.length / MAX_CONTENTS_BY_CONTENT);
+  // const commentsItems = document.querySelectorAll(".comment-items");
+  // console.log(commentsItems);
+  // let counter = 0;
+</script>
