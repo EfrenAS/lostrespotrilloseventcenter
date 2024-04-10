@@ -5,7 +5,7 @@ import comments from '../../config/comments.json';
 // Components
 import Comment from '../CommentCard.astro';
 
-const dotteds = Array.from({ length: comments.length }, (v, i) => i);
+const dotteds = Array.from({ length: comments.length }, (i) => i);
 ---
 
 <section class="comments">
@@ -18,7 +18,7 @@ const dotteds = Array.from({ length: comments.length }, (v, i) => i);
       Nuestros clientes nos han compartido sus comentarios
     </p>
     <div class="dotteds-container">
-      {dotteds.map((dotted) => <div class="dotted" />)}
+      {dotteds.map(() => <div class="dotted" />)}
     </div>
     <div class="comments_items container">
       {
@@ -50,10 +50,6 @@ const dotteds = Array.from({ length: comments.length }, (v, i) => i);
           currentSlides(index);
         });
       });
-
-      const plusSlides = (n: number) => {
-        showSlides((slideIndex += n));
-      };
 
       const currentSlides = (n: number) => {
         showSlides((slideIndex = n));

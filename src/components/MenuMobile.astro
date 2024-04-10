@@ -14,8 +14,8 @@
 
     console.log(menu);
 
-    menuButton?.addEventListener('click', (e) => {
-      e.target.closest('.hamburger').classList.toggle('change');
+    menuButton?.addEventListener('click', (event) => {
+      event.target.closest('.hamburger').classList.toggle('change');
       menu?.classList.toggle('show-on');
     });
   }
