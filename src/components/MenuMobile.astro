@@ -1,8 +1,24 @@
 <div class="menu-mobile">
-    <p>Menu</p>
-    <div class="hamburger">
-        <div class="bar-1"></div>
-        <div class="bar-2"></div>
-        <div class="bar-3"></div>
-    </div>
+  <p>Menu</p>
+  <div class="hamburger">
+    <div class="bar-1"></div>
+    <div class="bar-2"></div>
+    <div class="bar-3"></div>
+  </div>
 </div>
+
+<script>
+  function toggleMenuButton() {
+    const menuButton = document.querySelector('.hamburger');
+    const menu = document.querySelector('.menu');
+
+    console.log(menu);
+
+    menuButton?.addEventListener('click', (e) => {
+      e.target.closest('.hamburger').classList.toggle('change');
+      menu?.classList.toggle('show-on');
+    });
+  }
+
+  toggleMenuButton();
+</script>

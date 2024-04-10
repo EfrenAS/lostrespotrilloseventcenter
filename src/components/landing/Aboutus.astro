@@ -1,10 +1,10 @@
 ---
 // Config
-import amenities from "../../config/amenities.json";
+import amenities from '../../config/amenities.json';
 
 // Components
-import CardComponent from "../Card.astro";
-import SubtitleDecorator from "../SubtitleDecorator.astro";
+import CardComponent from '../Card.astro';
+import SubtitleDecorator from '../SubtitleDecorator.astro';
 ---
 
 <section class="about-us" id="about-us">
@@ -37,16 +37,16 @@ import SubtitleDecorator from "../SubtitleDecorator.astro";
 </section>
 
 <script>
-  import anime from "animejs/lib/anime.es";
-  import { scaleUp } from "../../scripts/utils";
+  import anime from 'animejs/lib/anime.es';
+  import { scaleUp } from '../../scripts/utils';
 
   let amenitiesObserver = new IntersectionObserver(monitorVisibility, {});
 
-  let amenities = document.querySelector(".amenities-container");
+  let amenities = document.querySelector('.amenities-container');
 
-  let iconsAmenities = amenities?.querySelectorAll(".card-image");
+  let iconsAmenities = amenities?.querySelectorAll('.card-image');
 
-  const counters = document.querySelectorAll(".card-title .counter");
+  const counters = document.querySelectorAll('.card-title .counter');
 
   function monitorVisibility(entries) {
     let entry = entries[0];
@@ -68,7 +68,7 @@ import SubtitleDecorator from "../SubtitleDecorator.astro";
     anime({
       targets: target,
       innerHTML: [startCounter, limitCounter],
-      easing: "easeInOutExpo",
+      easing: 'easeInOutExpo',
       round: 1,
       duration: 2000,
     });

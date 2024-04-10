@@ -1,12 +1,13 @@
 .menu-mobile {
     display: flex;
-    gap: 2rem;
     align-items: center;
+    gap: 2rem;
     border-radius: 0.5rem;
     color: $c-background;
     font-weight: $bold;
     text-transform: uppercase;
-    
+    z-index: 2;
+
     @include d-medium {
         width: 15rem;
     }
@@ -22,26 +23,29 @@
 
 .hamburger {
     cursor: pointer;
+}
 
-    .bar-1,
-    .bar-2,
-    .bar-3 {
-        background: $c-background;
-        border-radius: 10px;
-        height: 3px;
-        margin: 8px;
-        width: 35px;
-    }
+.bar-1,
+.bar-2,
+.bar-3 {
+    background: $c-background;
+    border-radius: 10px;
+    height: 3px;
+    margin: 8px;
+    transition: 0.4s;
+    width: 35px;
+}
 
-    .change .bar-1 {
-        transform: translate(0, 11px) rotate(-45deg);
-      }
-      
-      .change .bar-2 {
-        opacity: 0;
-      }
-      
-      .change .bar-3 {
-        transform: translate(0, -11px) rotate(45deg);
-      }
+.change .bar-1 {
+    background-color: $brown;
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar-2 {
+    opacity: 0;
+}
+
+.change .bar-3 {
+    background-color: $brown;
+    transform: translate(0, -11px) rotate(45deg);
 }

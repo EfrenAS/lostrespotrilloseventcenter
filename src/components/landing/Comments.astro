@@ -1,9 +1,9 @@
 ---
 // Config
-import comments from "../../config/comments.json";
+import comments from '../../config/comments.json';
 
 // Components
-import Comment from "../CommentCard.astro";
+import Comment from '../CommentCard.astro';
 
 const dotteds = Array.from({ length: comments.length }, (v, i) => i);
 ---
@@ -34,9 +34,56 @@ const dotteds = Array.from({ length: comments.length }, (v, i) => i);
   </div>
 </section>
 <script>
-  // const MAX_CONTENTS_BY_CONTENT = 2;
-  // const contents = Math.round(comments.length / MAX_CONTENTS_BY_CONTENT);
-  // const commentsItems = document.querySelectorAll(".comment-items");
-  // console.log(commentsItems);
-  // let counter = 0;
+  let commentSectionObserver = new IntersectionObserver(monitorVisibility, {});
+  let commentContainer = document.querySelector('.comments');
+
+  function monitorVisibility(entries) {
+    let entry = entries[0];
+
+    if (entry.isIntersecting) {
+      let slideIndex = 0;
+      let slides = document.querySelectorAll('.comment-item');
+      let dots = document.querySelectorAll('.dotted');
+
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          currentSlides(index);
+        });
+      });
+
+      const plusSlides = (n: number) => {
+        showSlides((slideIndex += n));
+      };
+
+      const currentSlides = (n: number) => {
+        showSlides((slideIndex = n));
+      };
+
+      function showSlides(n: number) {
+        if (n > slides.length) {
+          slideIndex = 0;
+        }
+        if (n < 0) {
+          slideIndex = slides.length;
+        }
+
+        slides.forEach((slide) => {
+          slide.classList.add('hidden');
+        });
+
+        dots.forEach((dot) => {
+          dot.classList.remove('actived');
+        });
+
+        slides[slideIndex].classList.remove('hidden');
+
+        slides[slideIndex + 1]?.classList.remove('hidden');
+        slides[slideIndex].classList.add('fade');
+        dots[slideIndex].classList.toggle('actived');
+      }
+
+      showSlides(slideIndex);
+    }
+  }
+  commentSectionObserver.observe(commentContainer);
 </script>

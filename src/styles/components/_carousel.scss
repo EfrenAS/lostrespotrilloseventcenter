@@ -5,6 +5,7 @@
   -moz-box-shadow: 0px 0px 10px -4px rgba(98, 80, 54, 1);
   box-shadow: 0px 0px 10px -4px rgba(98, 80, 54, 1);
   padding: calc($spacing/ 3) calc($spacing / 6);
+  width: 100%;
   max-width: 70rem;
 
   &__title {
@@ -21,7 +22,12 @@
 
   &__slide {
     position: relative;
-    height: 40rem;
+    height: 20rem;
+
+
+    @include d-medium {
+      height: 40rem;
+    }
 
     picture,
     img {
@@ -41,8 +47,13 @@
     picture,
     img {
       border-radius: 0.2rem;
-      width: 12rem;
-      height: 8rem;
+      height: 4rem;
+
+      @include d-medium {
+        height: 8rem;
+        width: 12rem;
+      }
+
     }
   }
 }
