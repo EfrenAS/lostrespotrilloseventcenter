@@ -1,8 +1,8 @@
 ---
-title: "Your Parthy"
-heroImage: "/src/assets/services/party.jpg"
+title: 'Your Parthy'
+heroImage: '../../assets/services/party.jpg'
 imageAttr:
-  alt: "Image your parthy wiht us"
+  alt: 'Image your parthy wiht us'
   width: 200
   height: 200
 ---

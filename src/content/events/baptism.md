@@ -1,8 +1,8 @@
 ---
-title: "Baptism"
-heroImage: "/src/assets/services/baptism.jpg"
+title: 'Baptism'
+heroImage: '../../assets/services/baptism.jpg'
 imageAttr:
-  alt: "Hero Image of Baptism"
+  alt: 'Hero Image of Baptism'
   width: 200
   height: 200
 ---

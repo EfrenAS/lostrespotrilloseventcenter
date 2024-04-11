@@ -1,8 +1,8 @@
 ---
-title: "Babyshower"
-heroImage: "/src/assets/services/babyshower.jpg"
+title: 'Babyshower'
+heroImage: '../..//assets/services/babyshower.jpg'
 imageAttr:
-  alt: "Imagen de Evento XV Años"
+  alt: 'Imagen de Evento XV Años'
   width: 200
   height: 200
 ---

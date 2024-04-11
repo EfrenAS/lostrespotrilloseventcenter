@@ -1,8 +1,8 @@
 ---
-title: "Wedding"
-heroImage: "/src/assets/services/widding.jpg"
+title: 'Wedding'
+heroImage: '../../assets/services/widding.jpg'
 imageAttr:
-  alt: "Imagen de una boda"
+  alt: 'Imagen de una boda'
   width: 200
   height: 200
 ---

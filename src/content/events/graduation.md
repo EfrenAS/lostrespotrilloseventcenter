@@ -1,8 +1,8 @@
 ---
-title: "Graduation"
-heroImage: "/src/assets/services/graduation.jpeg"
+title: 'Graduation'
+heroImage: '../..//assets/services/graduation.jpeg'
 imageAttr:
-  alt: "Hero Image of Graduation"
+  alt: 'Hero Image of Graduation'
   width: 200
   height: 200
 ---

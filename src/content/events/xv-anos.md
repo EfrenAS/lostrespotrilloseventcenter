@@ -1,8 +1,8 @@
 ---
-title: "XV años"
-heroImage: "/src/assets/services/xvparthy.jpg"
+title: 'XV años'
+heroImage: '../../assets/services/xvparthy.jpg'
 imageAttr:
-  alt: "Imagen de Evento XV Años"
+  alt: 'Imagen de Evento XV Años'
   width: 200
   height: 200
 ---

@@ -1,52 +1,52 @@
 [
-    {
-        "title": "XV Años",
-        "img": {
-            "url": "/src/assets/services/xvparthy.jpg",
-            "alt": "Imagen de Evento XV Años",
-            "width": 200,
-            "height": 200
-        },
-        "description": "false"
+  {
+    "title": "XV Años",
+    "img": {
+      "url": "./assets/services/xvparthy.jpg",
+      "alt": "Imagen de Evento XV Años",
+      "width": 200,
+      "height": 200
     },
-    {
-        "title": "Babyshower",
-        "img": {
-            "url":  "/src/assets/services/babyshower.jpg",
-            "alt": "Imagen de Evento Baby Shower",
-            "width": 200,
-            "height": 200
-        },
-        "showContactBtn": false
+    "description": "false"
+  },
+  {
+    "title": "Babyshower",
+    "img": {
+      "url": "/src/assets/services/babyshower.jpg",
+      "alt": "Imagen de Evento Baby Shower",
+      "width": 200,
+      "height": 200
     },
-    {
-        "title": "Baptism",
-        "img": {
-            "url":  "/src/assets/services/baptism.jpg",
-            "alt": "Imagen de un Bautismo",
-            "width": 200,
-            "height": 200
-        },
-        "showContactBtn": false
+    "showContactBtn": false
+  },
+  {
+    "title": "Baptism",
+    "img": {
+      "url": "/src/assets/services/baptism.jpg",
+      "alt": "Imagen de un Bautismo",
+      "width": 200,
+      "height": 200
     },
-    {
-        "title": "Wedding",
-        "img": {
-            "url": "/src/assets/services/widding.jpg",
-            "alt":  "Foto de una Boda",
-            "width": 200,
-            "height": 200
-        },
-        "showContactBtn": false
+    "showContactBtn": false
+  },
+  {
+    "title": "Wedding",
+    "img": {
+      "url": "/src/assets/services/widding.jpg",
+      "alt": "Foto de una Boda",
+      "width": 200,
+      "height": 200
     },
-    {
-        "title" : "My Parthy",
-        "img":{
-            "url" : "/src/assets/services/black-background.jpeg",
-            "alt":"Foto de tu fiesta con nosotros",
-            "width": 200,
-            "height": 200
-        },
-        "showContactBtn": true
-    }
+    "showContactBtn": false
+  },
+  {
+    "title": "My Parthy",
+    "img": {
+      "url": "/src/assets/services/black-background.jpeg",
+      "alt": "Foto de tu fiesta con nosotros",
+      "width": 200,
+      "height": 200
+    },
+    "showContactBtn": true
+  }
 ]

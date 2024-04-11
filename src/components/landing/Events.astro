@@ -26,9 +26,10 @@ const events = await getCollection('events');
           <div class="event__image">
             <Picture
               src={event.data.heroImage}
-              alt={event.data.imageAttr.alt}
-              width={event.data.imageAttr.width}
+              formats={['avif', 'webp']}
               height={event.data.imageAttr.height}
+              width={event.data.imageAttr.width}
+              alt={event.data.imageAttr.alt}
             />
           </div>
           <div class="event__content">
