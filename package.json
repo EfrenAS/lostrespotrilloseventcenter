@@ -7,8 +7,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "deploy": "gh-pages -d dist"
+    "astro": "astro"
   },
   "dependencies": {
     "@astrojs/check": "^0.4.1",
@@ -20,7 +19,6 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
-    "@iconify-json/mdi": "^1.1.64",
-    "gh-pages": "^6.1.1"
+    "@iconify-json/mdi": "^1.1.64"
   }
 }
