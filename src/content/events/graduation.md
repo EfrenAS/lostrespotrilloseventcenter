@@ -1,6 +1,6 @@
 ---
 title: 'Graduation'
-heroImage: '../..//assets/services/graduation.jpeg'
+heroImage: '../../assets/services/graduation.jpeg'
 imageAttr:
   alt: 'Hero Image of Graduation'
   width: 200
