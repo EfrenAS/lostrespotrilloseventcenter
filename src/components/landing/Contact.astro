@@ -1,18 +1,18 @@
 ---
-import { fade } from "astro:transitions";
+import { fade } from 'astro:transitions';
 
 // Data
-import contactInfo from "../../config/contact.json";
+import contactInfo from '../../config/contact.json';
 
-import { Picture } from "astro:assets";
-import { Icon } from "astro-icon/components";
-import SubtitleDecorator from "../SubtitleDecorator.astro";
+import { Picture } from 'astro:assets';
+import { Icon } from 'astro-icon/components';
+import SubtitleDecorator from '../SubtitleDecorator.astro';
 ---
 
 <section
   class="contact container"
   id="contact"
-  transition:animate={fade({ duration: "4s" })}
+  transition:animate={fade({ duration: '4s' })}
 >
   <h2 class="subtitle">
     Contact
@@ -28,6 +28,7 @@ import SubtitleDecorator from "../SubtitleDecorator.astro";
         alt={contactInfo.img.alt}
         width={200}
         height={200}
+        formats={['avif', 'webp']}
       />
     </div>
     <div class="contact-text">
