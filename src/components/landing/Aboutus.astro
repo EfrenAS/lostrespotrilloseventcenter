@@ -1,10 +1,14 @@
 ---
-// Config
-import amenities from '../../config/amenities.json';
+import { Picture } from 'astro:assets';
+import { getCollection } from 'astro:content';
 
 // Components
-import CardComponent from '../Card.astro';
+import AmenityCard from '../AmenityCard.astro';
 import SubtitleDecorator from '../SubtitleDecorator.astro';
+
+const amenities = await getCollection('amenities');
+
+amenities.sort((a, b) => a.data.id - b.data.id);
 ---
 
 <section class="about-us" id="about-us">
@@ -21,16 +25,17 @@ import SubtitleDecorator from '../SubtitleDecorator.astro';
       <a href="#" class="border-dotted-bottom text-primary"
         >Come and see the place</a
       >
-    </span>.
+    </span>
   </p>
   <div class="amenities-container">
     {
       amenities.map((amenity) => (
-        <CardComponent
-          quantity={amenity.quantity}
-          measurement={amenity.measurement}
-          img={amenity.img}
-        />
+        <AmenityCard
+          quantity={amenity.data.quantity}
+          measurement={amenity.data.measurement}
+        >
+          <Picture src={amenity.data.icon} alt={amenity.data.altImage} />
+        </AmenityCard>
       ))
     }
   </div>

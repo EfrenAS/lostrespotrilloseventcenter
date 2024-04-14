@@ -14,6 +14,22 @@ const eventsCollection = defineCollection({
     }),
 });
 
+const amenities = defineCollection({
+  type: 'data',
+  schema: ({ image }) =>
+    z.object({
+      id: z.number(),
+      quantity: z.number(),
+      measurement: z.string(),
+      icon: image(),
+      width: z.number(),
+      height: z.number(),
+      formats: z.string().array(),
+      altImage: z.string(),
+    }),
+});
+
 export const collections = {
   events: eventsCollection,
+  amenities: amenities,
 };

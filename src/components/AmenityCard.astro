@@ -1,0 +1,23 @@
+---
+import { Picture } from 'astro:assets';
+
+interface Props {
+  quantity: number;
+  measurement: string;
+}
+
+// Props
+const { quantity, measurement } = Astro.props;
+---
+
+<div class="card">
+  <div class="card-image">
+    <slot />
+  </div>
+  <div class="card-body">
+    <p class="card-title text-secondary">
+      <span class="counter" data-count={quantity}>0</span>
+      <span class="text-primary subscript">{measurement}</span>
+    </p>
+  </div>
+</div>
