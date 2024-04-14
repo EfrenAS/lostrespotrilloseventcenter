@@ -1,0 +1,21 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<div class="carousel">
+  <div class="carousel__title">
+    <span>
+      <Icon name="mdi:camera-enhance" class="icon-secondary icon-xxl" />
+    </span>
+    <h2>
+      {title}
+    </h2>
+  </div>
+  <slot />
+</div>

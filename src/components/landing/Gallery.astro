@@ -1,9 +1,13 @@
 ---
-import Carousel from "../Carousel.astro";
+import { getCollection } from 'astro:content';
+import { Picture } from 'astro:assets';
 
-import SubtitleDecorator from "../SubtitleDecorator.astro";
+// Components
+import CarouselGallery from '../CarouselGallery.astro';
 
-import albums from "../../config/albums.json";
+import SubtitleDecorator from '../SubtitleDecorator.astro';
+
+const albums = await getCollection('albums');
 ---
 
 <section class="gallery" id="gallery">
@@ -21,11 +25,18 @@ import albums from "../../config/albums.json";
   <div class="gallery__container">
     {
       albums.map((album) => (
-        <Carousel
-          title={album.title}
-          imageAttr={album.imageAttr}
-          pictures={album.pictures}
-        />
+        <CarouselGallery title={album.data.title}>
+          <div class="carousel__slides">
+            {album.data.pictures.map((picture) => (
+              <Picture src={picture} alt={album.data.altImage} />
+            ))}
+          </div>
+          <div class="carousel__thumbnails">
+            {album.data.pictures.map((picture) => (
+              <Picture src={picture} alt={album.data.altImage} />
+            ))}
+          </div>
+        </CarouselGallery>
       ))
     }
   </div>

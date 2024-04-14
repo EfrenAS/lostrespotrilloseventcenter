@@ -29,7 +29,21 @@ const amenities = defineCollection({
     }),
 });
 
+const albums = defineCollection({
+  type: 'data',
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      altImage: z.string(),
+      pictures: image().array(),
+      formats: z.string().array(),
+      width: z.number(),
+      height: z.number(),
+    }),
+});
+
 export const collections = {
   events: eventsCollection,
   amenities: amenities,
+  albums: albums,
 };
