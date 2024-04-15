@@ -3,8 +3,8 @@ title: 'Babyshower'
 heroImage: '../../assets/services/babyshower.jpg'
 imageAttr:
   alt: 'Imagen de Evento XV Años'
-  width: 200
-  height: 200
+  width: 640
+  height: 427
 ---
 
 ¡Celebra la llegada del nuevo miembro de la familia en nuestro encantador salón de eventos!

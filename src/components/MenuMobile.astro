@@ -12,8 +12,6 @@
     const menuButton = document.querySelector('.hamburger');
     const menu = document.querySelector('.menu');
 
-    console.log(menu);
-
     menuButton?.addEventListener('click', (event) => {
       event.target.closest('.hamburger').classList.toggle('change');
       menu?.classList.toggle('show-on');

@@ -5,7 +5,9 @@ const eventsCollection = defineCollection({
   schema: ({ image }) =>
     z.object({
       title: z.string(),
-      heroImage: image(),
+      heroImage: image().refine((img) => img.width >= 600, {
+        message: 'The cover image must have to width 600 pixels',
+      }),
       imageAttr: z.object({
         alt: z.string(),
         width: z.number(),
@@ -35,7 +37,11 @@ const albums = defineCollection({
     z.object({
       title: z.string(),
       altImage: z.string(),
-      pictures: image().array(),
+      pictures: image()
+        .refine((img) => img.width >= 600, {
+          message: 'The cover image must have to width 600 pixels',
+        })
+        .array(),
       formats: z.string().array(),
       width: z.number(),
       height: z.number(),

@@ -3,8 +3,8 @@ title: 'Graduation'
 heroImage: '../../assets/services/graduation.jpeg'
 imageAttr:
   alt: 'Hero Image of Graduation'
-  width: 200
-  height: 200
+  width: 640
+  height: 427
 ---
 
 ¡Celebra tu logro académico en grande en nuestro salón de eventos!

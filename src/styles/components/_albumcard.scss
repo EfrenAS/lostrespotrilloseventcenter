@@ -1,0 +1,28 @@
+.album {
+
+  &-card {
+    display: flex;
+    width: 50rem;
+    height: 30rem;
+    background-color: $c-primary;
+    align-items: flex-end;
+    border-radius: 0.2rem;
+  }
+
+  &-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: calc($spacing / 6);
+    padding-left: calc($spacing / 6);
+    background-color: rgb(255 255 255 / 30%);
+    backdrop-filter: blur(20px);
+    width: 100%;
+
+    h3 {
+      width: 100%;
+      font-size: $text-md;
+      color: $c-background;
+    }
+  }
+}

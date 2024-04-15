@@ -3,8 +3,8 @@ title: 'Wedding'
 heroImage: '../../assets/services/widding.jpg'
 imageAttr:
   alt: 'Imagen de una boda'
-  width: 200
-  height: 200
+  width: 640
+  height: 427
 ---
 
 ¡Celebra el día más importante de tu vida en nuestro hermoso salón de eventos!

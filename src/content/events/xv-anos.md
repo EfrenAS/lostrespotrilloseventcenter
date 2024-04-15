@@ -3,8 +3,8 @@ title: 'XV años'
 heroImage: '../../assets/services/xvparthy.jpg'
 imageAttr:
   alt: 'Imagen de Evento XV Años'
-  width: 200
-  height: 200
+  width: 640
+  height: 427
 ---
 
 ¡Celebra tu XV años en grande en nuestro elegante salón de eventos!

@@ -1,0 +1,13 @@
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  // grid-template-rows: repeat(3, 1fr);
+
+  gap: calc($spacing / 3);
+
+  margin-top: $spacing;
+}
+
+.picture-highlight {
+  grid-template-columns: repeat(2, 1fr);
+}

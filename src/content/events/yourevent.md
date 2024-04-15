@@ -3,8 +3,8 @@ title: 'Your Parthy'
 heroImage: '../../assets/services/party.jpg'
 imageAttr:
   alt: 'Image your parthy wiht us'
-  width: 200
-  height: 200
+  width: 640
+  height: 427
 ---
 
 ¿Estás listo para llevar tu evento al siguiente nivel? En Los Tres Potrillos Event & Hall Center, te ofrecemos una experiencia incomparable que hará que tu celebración sea inolvidable.

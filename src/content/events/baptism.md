@@ -3,8 +3,8 @@ title: 'Baptism'
 heroImage: '../../assets/services/baptism.jpg'
 imageAttr:
   alt: 'Hero Image of Baptism'
-  width: 200
-  height: 200
+  width: 640
+  height: 427
 ---
 
 ¡Celebra el bautismo de tu hijo en nuestro hermoso salón de eventos!

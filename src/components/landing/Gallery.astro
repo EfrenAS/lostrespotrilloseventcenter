@@ -4,8 +4,10 @@ import { Picture } from 'astro:assets';
 
 // Components
 import CarouselGallery from '../CarouselGallery.astro';
-
 import SubtitleDecorator from '../SubtitleDecorator.astro';
+
+// import GalleryGrid from '../GalleryGrid.astro';
+
 
 const albums = await getCollection('albums');
 ---
@@ -23,6 +25,7 @@ const albums = await getCollection('albums');
     them.
   </p>
   <div class="gallery__container">
+    <!-- <GalleryGrid /> -->
     {
       albums.map((album) => (
         <CarouselGallery title={album.data.title}>
